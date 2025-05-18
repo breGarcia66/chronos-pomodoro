@@ -3,16 +3,23 @@ import { Heading } from "./components/Heading";
 
 import "./styles/themes.css";
 import "./styles/global.css";
+import { TimerIcon } from "lucide-react";
 
 export function App() {
   return (
     <>
-      <Heading />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quasi sit
-        illo! Beatae maxime ipsam libero veniam unde. Sapiente explicabo quaerat
-        fugit aliquam atque incidunt repellendus doloremque ullam? Harum, odit.
-      </p>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="content">
+            <section>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium expedita facere, omnis labore voluptatem dolore
+              officia autem, neque sunt ut, necessitatibus in ipsum. Sequi quam
+              dolores doloremque nulla sed aliquam.
+            </section>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,6 +1,11 @@
-import Styles from "./Heading.modules.css";
+//Importando CSS modules
+import styles from "./Heading.module.css";
 
-export function Heading() {
-  console.log(Styles);
-  return <h1>Hello, world!!!</h1>;
+type HeadingProps = {
+  children: React.ReactNode;
+};
+
+export function Heading({ children }: HeadingProps) {
+  console.log(children);
+  return <h1 className={styles.heading}>{children}</h1>;
 }
