@@ -1,14 +1,18 @@
 //Nomes de funções no uso de React deve ser escrito em PascalCase
-import { Heading } from "./components/Heading";
 import { Container } from "./components/Container";
+import { Heading } from "./components/Heading";
+import { Logo } from "./components/Logo";
+import { TimerIcon } from "lucide-react";
 
 import "./styles/themes.css";
 import "./styles/global.css";
-import { TimerIcon } from "lucide-react";
 
 export function App() {
   return (
     <>
+      <Container>
+        <Logo />
+      </Container>
       <Container>
         <Heading>Pomodoro</Heading>
       </Container>
