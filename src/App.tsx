@@ -1,8 +1,7 @@
 //Nomes de funções no uso de React deve ser escrito em PascalCase
 import { Container } from "./components/Container";
-import { Heading } from "./components/Heading";
 import { Logo } from "./components/Logo";
-import { TimerIcon } from "lucide-react";
+import { Menu } from "./components/Menu";
 
 import "./styles/themes.css";
 import "./styles/global.css";
@@ -14,7 +13,7 @@ export function App() {
         <Logo />
       </Container>
       <Container>
-        <Heading>Pomodoro</Heading>
+        <Menu />
       </Container>
     </>
   );
