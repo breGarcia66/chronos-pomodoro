@@ -9,9 +9,9 @@ import { TimerIcon } from "lucide-react";
 export function App() {
   return (
     <>
-        <Container>
-          <Heading>Pomodoro</Heading>
-        </Container>
+      <Container>
+        <Heading>Pomodoro</Heading>
+      </Container>
     </>
   );
 }
