@@ -4,6 +4,7 @@ import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
 import { DefaultInput } from "./components/DefaultInput";
+import { Cycles } from "./components/Cycles";
 
 import "./styles/themes.css";
 import "./styles/global.css";
@@ -30,7 +31,7 @@ export function App() {
               propId="myInput"
               type="text"
               propLabelText="Task:"
-              placeholder="Digite sua task..."
+              placeholder="Type something..."
               required
             />
           </div>
@@ -40,8 +41,7 @@ export function App() {
           </div>
 
           <div className="formRow">
-            <p>Ciclos:</p>
-            <div>0 0 0 0 0 0 0 0 0</div>
+            <Cycles />
           </div>
 
           <div className="formRow">
