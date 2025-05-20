@@ -26,7 +26,13 @@ export function App() {
       <Container>
         <form className="taskForm" action="">
           <div className="formRow">
-            <DefaultInput propId="myInput" type="text" propLabelText="Task:" required/>
+            <DefaultInput
+              propId="myInput"
+              type="text"
+              propLabelText="Task:"
+              placeholder="Digite sua task..."
+              required
+            />
           </div>
 
           <div className="formRow">
