@@ -1,12 +1,20 @@
 import { useState, useEffect } from "react";
-import { House, History, Settings, Sun } from "lucide-react";
+import { House, History, Settings, Sun, Moon } from "lucide-react";
 
 import styles from "./styles.module.css";
 
 type AvailableThemes = "light" | "dark";
 
 export function Menu() {
-  const [theme, setTheme] = useState<AvailableThemes>("dark");
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const localStorageTheme = (localStorage.getItem('theme') as AvailableThemes) || "dark";
+    return localStorageTheme;
+  });
+
+  const nextThemeIcon = {
+    dark: <Sun />,
+    light: <Moon />
+  }
 
   function handleThemeChange(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault();
@@ -20,7 +28,7 @@ export function Menu() {
   
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    return () => console.log('cleanup'); //função utilizada para limpar 'sujeiras' no site
+    localStorage.setItem('theme', theme);
   }, [theme]) //executa somente quando 'theme' mudar de valor
 
   return (
@@ -58,7 +66,7 @@ export function Menu() {
         title="Light/dark theme"
         onClick={handleThemeChange}
       >
-        <Sun />
+        {nextThemeIcon[theme]}
       </a>
     </nav>
   );
