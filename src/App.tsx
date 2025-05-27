@@ -5,8 +5,11 @@ import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
 import { DefaultInput } from "./components/DefaultInput";
 import { Cycles } from "./components/Cycles";
-import { DefaultButton } from "./components/DefaultButton"
+import { DefaultButton } from "./components/DefaultButton";
+import { Footer } from "./components/Footer/indes";
+
 import { PlayCircle } from "lucide-react";
+
 
 import "./styles/themes.css";
 import "./styles/global.css";
@@ -47,9 +50,13 @@ export function App() {
           </div>
 
           <div className="formRow">
-            <DefaultButton propIcon={<PlayCircle />}/>
+            <DefaultButton propIcon={<PlayCircle />} />
           </div>
         </form>
+      </Container>
+
+      <Container>
+        <Footer />
       </Container>
     </>
   );
