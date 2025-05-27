@@ -1,4 +1,7 @@
 //Nomes de funções no uso de React deve ser escrito em PascalCase
+
+// import { AboutPomodoro } from "./pages/AboutPomodoro";
+// import { NotFound } from "./pages/NotFound";
 import { Home } from "./pages/Home";
 
 import "./styles/themes.css";
