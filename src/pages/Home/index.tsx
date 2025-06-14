@@ -5,18 +5,29 @@ import { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../template/MainTemplate";
 
 type HomeProps = {
-  propState: TaskStateModel;
-  propSetState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
+  state: TaskStateModel;
+  setState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
 }
 
 export function Home(props: HomeProps) {
-  const { state, propSetState } = props;
+  const { state, setState } = props;
+  
+  //Exemplo de como alterar um state quando é um objeto mutável
+  
+  // function handleClick() {
+  //   setState(prevState => {
+  //     return{
+  //       ...prevState,
+  //       currentCycle: 8,
+  //     };
+  //   });
+  // };
 
   return (
     <MainTemplate>
-      <Container>
+      {/* <Container>
         <button onClick={handleClick}>Click me</button>
-      </Container>
+      </Container> */}
 
       <Container>
         <CountDown />

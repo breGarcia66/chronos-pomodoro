@@ -25,7 +25,9 @@ const initialState: TaskStateModel = {
 export function App() {
   const [state, setState] = useState(initialState);
 
-  return <Home propState={state} propSetState={setState} />;
+  console.log('APP', state);
+
+  return <Home state={state} setState={setState} />;
 }
 
 //export { App } -> Export com nome específico

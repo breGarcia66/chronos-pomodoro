@@ -7,37 +7,35 @@ type AvailableThemes = "light" | "dark";
 
 export function Menu() {
   const [theme, setTheme] = useState<AvailableThemes>(() => {
-    const localStorageTheme = (localStorage.getItem('theme') as AvailableThemes) || "dark";
+    const localStorageTheme =
+      (localStorage.getItem("theme") as AvailableThemes) || "dark";
     return localStorageTheme;
   });
 
   const nextThemeIcon = {
     dark: <Sun />,
-    light: <Moon />
-  }
+    light: <Moon />,
+  };
 
-  function handleThemeChange(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  function handleThemeChange(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) {
     event.preventDefault();
 
-    setTheme(prevTheme => {
-      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+    setTheme((prevTheme) => {
+      const nextTheme = prevTheme === "dark" ? "light" : "dark";
       return nextTheme;
-    })
-
+    });
   }
-  
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]) //executa somente quando 'theme' mudar de valor
+    localStorage.setItem("theme", theme);
+  }, [theme]); //executa somente quando 'theme' mudar de valor
 
   return (
     <nav className={styles.menu}>
-      <a 
-        className={styles.menuLink} 
-        href="#" aria-label="Home" 
-        title="Home"
-      >
+      <a className={styles.menuLink} href="#" aria-label="Home" title="Home">
         <House />
       </a>
       <a
