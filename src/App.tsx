@@ -5,6 +5,7 @@
 import { Home } from "./pages/Home";
 import { TaskStateModel } from "./models/TaskStateModel";
 import { useState } from "react";
+import { TaskContext } from "./contexts/TaskContext";
 
 import "./styles/themes.css";
 import "./styles/global.css";
@@ -25,7 +26,11 @@ const initialState: TaskStateModel = {
 export function App() {
   const [state, setState] = useState(initialState);
 
-  return <Home />;
+  return (
+    <TaskContext.Provider value={{ outraCoisa: 'Testando provider' }}>
+      <Home />;
+    </TaskContext.Provider>
+  );
 }
 
 //export { App } -> Export com nome específico
