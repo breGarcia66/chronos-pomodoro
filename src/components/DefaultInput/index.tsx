@@ -1,16 +1,16 @@
 import styles from "./styles.module.css";
 
 type DefaultInputProps = {
-  propId: string;
-  propLabelText?: string; //'?' informa que essa propriedade é opcional
+  id: string;
+  labelText?: string; //'?' informa que essa propriedade é opcional
 } & React.ComponentProps<'input'>;
 
 
-export function DefaultInput({ propId, propLabelText, type, ...props }: DefaultInputProps) {
+export function DefaultInput({ id, labelText, type, ...props }: DefaultInputProps) {
   return (
     <>
-      {propLabelText && <label className="labelText" htmlFor={propId}>{propLabelText}</label>}
-      <input className={styles.inputDefault} id={propId} type={type} {...props}/>
+      {labelText && <label className="labelText" htmlFor={id}>{labelText}</label>}
+      <input className={styles.inputDefault} id={id} type={type} {...props}/>
     </>
   );
 }
