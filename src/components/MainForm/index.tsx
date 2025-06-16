@@ -4,9 +4,16 @@ import { DefaultButton } from "../DefaultButton";
 import { PlayCircle } from "lucide-react";
 
 export function MainForm() {
+  function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault();
+    console.log('Testando evento de submeter página...')
+  }
 
   return (
-    <form className="taskForm" action="">
+    <form
+    onSubmit={handleCreateNewTask} 
+    className="taskForm" 
+    action="">
       <div className="formRow">
         <DefaultInput
           id="myInput"
